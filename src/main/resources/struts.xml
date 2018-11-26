@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <package name="strutsBean" extends="struts-default" namespace="/">
+        <action name="login" class="cn.edu.zjut.action.UserAction" method="login">
+            <result name="adminSuccess">/adminHomePage.jsp</result>
+            <result name="teacherSuccess">/teacherHomePage.jsp</result>
+            <result name="loginFail">/login.jsp</result>
+        </action>
+        <action name="stuMessHome" class="cn.edu.zjut.action.AdminStudentMessageAction" method="stuMessHome">
+            <result name="stuMessHomeSuccess">/adminOpeStuMess.jsp</result>
+        </action>
+        <action name="teacherMessHome" class="cn.edu.zjut.action.AdminTeacherMessageAction" method="teacherMessHome">
+            <result name="teacherMessHomeSuccess">/adminOpeTeacherMess.jsp</result>
+        </action>
+        <action name="attendanceMessHome" class="cn.edu.zjut.action.AdminAttendanceMessageAction" method="attendanceMessHome">
+            <result name="attendanceMessHomeSuccess">/adminOpeAttendanceMess.jsp</result>
+        </action>
+        <action name="teaOpeAttendance" class="cn.edu.zjut.action.TeacherOpeAttendanceAction" method="teaOpeAttendance">
+            <result name="attendanceMessHomeSuccess">/teacherOpeAttendance.jsp</result>
+        </action>
+    </package>
+</struts>
